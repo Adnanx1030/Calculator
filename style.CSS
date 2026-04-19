@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+}
+
+/* FULL BACKGROUND */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    /* Change Cal1 to Cali */
+    background-image: url("ASSETS/Cali.jpg"); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* DEVICE FRAME (like real calculator) */
+.device{
+    margin-right:80px;
+    width:320px;
+    padding:20px;
+
+    background: linear-gradient(145deg,#2c2c2c,#1a1a1a);
+    border-radius:25px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.6),
+        inset 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* DISPLAY */
+.display{
+    background:#0d0d0d;
+    color:#00ff88;
+
+    font-size:32px;
+    text-align:right;
+
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* BUTTON GRID */
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+/* BUTTON STYLE (3D LOOK) */
+.btn{
+    height:60px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(145deg,#3a3a3a,#1e1e1e);
+    color:white;
+    font-size:18px;
+
+    cursor:pointer;
+    transition:0.15s;
+
+    box-shadow:
+        3px 3px 8px rgba(0,0,0,0.6),
+        -2px -2px 5px rgba(255,255,255,0.05);
+}
+
+.btn:active{
+    transform:scale(0.95);
+    box-shadow: inset 0 0 8px black;
+}
+
+/* SPECIAL COLORS */
+.gray{
+    background:#9e9e9e;
+    color:black;
+}
+
+.orange{
+    background:#ff9500;
+    color:white;
+}
+
+/* ZERO BUTTON */
+.zero{
+    grid-column:span 2;
+} 
